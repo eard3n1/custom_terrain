@@ -1,6 +1,9 @@
 from ursina import *
 import random
 
+MODEL = "cube"
+TEXTURE = "assets/grass.png"
+
 class Voxel(Entity):
     model_shared = "cube"
     def __init__(self, position=(0, 0, 0)):
@@ -11,12 +14,13 @@ class Voxel(Entity):
         )
         super().__init__(
             parent=scene,
-            model=Voxel.model_shared,
+            model=MODEL,
             position=position,
             origin_y=0.5,
-            texture=None,
+            texture=TEXTURE,
             color=color_variation,
             collider="box",
+            double_sided=False
         )
 
 class VoxelController(Entity):
