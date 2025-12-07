@@ -5,7 +5,6 @@ MODEL = "cube"
 TEXTURE = "assets/grass.png"
 
 class Voxel(Entity):
-    model_shared = "cube"
     def __init__(self, position=(0, 0, 0)):
         color_variation = Vec4(
             (100 + random.randint(-20, 20)) / 255,
@@ -16,11 +15,10 @@ class Voxel(Entity):
             parent=scene,
             model=MODEL,
             position=position,
-            origin_y=0.5,
+            origin_y=1,
             texture=TEXTURE,
             color=color_variation,
             collider="box",
-            double_sided=False
         )
 
 class VoxelController(Entity):
