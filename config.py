@@ -1,5 +1,6 @@
 WIDTH = 20
 DEPTH = 20
+
 MAX_HEIGHT = 5
 
-SEED = 67
+SEED = None
